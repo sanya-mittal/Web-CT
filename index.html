@@ -1,0 +1,56 @@
+<html>
+
+<head>
+	<link rel="manifest" href="/manifest.json">
+<title>Sanya Mittal</title>
+<script type="text/javascript">
+     var clevertap = {event:[], profile:[], account:[], onUserLogin:[], notifications:[], privacy:[]};
+ // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
+clevertap.account.push({"id": "W65-875-475Z"});
+clevertap.privacy.push({optOut: false}); //set the flag to true, if the user of the device opts out of sharing their data
+clevertap.privacy.push({useIP: false}); //set the flag to true, if the user agrees to share their IP data
+ (function () {
+		 var wzrk = document.createElement('script');
+		 wzrk.type = 'text/javascript';
+		 wzrk.async = true;
+		 wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/a.js';
+		 var s = document.getElementsByTagName('script')[0];
+		 s.parentNode.insertBefore(wzrk, s);
+  })();
+  var fn = document.getElementById("fullname");
+  var email = document.getElementById("email");
+  var identity = document.getElementById("identity");
+function userlogin() {
+
+clevertap.onUserLogin.push({
+ "Site": {
+   "Name": fn ,            // String
+    "Identity":identity,          
+   "Email": email
+                
+   
+ }
+});
+
+}
+</script>
+
+
+
+</head>
+<body bgcolor=#b19cd9>
+<img src= "https://media1.tenor.com/images/49af2056717bdc97ea295b1329ad294b/tenor.gif " align="right">
+<h1 align=center>Welcome to CleverTap</h1>
+<p style="font-size:160%">Name:</p>
+<input type="text" id="fullname">
+<p style="font-size:160%">Email ID:</p>
+<input type="text" id="email">
+<p style="font-size:160%">Identity:</p>
+<input type="text" id="identity"> <br>
+<p>
+<button onclick="userlogin()">Login</button>
+
+
+
+</body>
+</html>
